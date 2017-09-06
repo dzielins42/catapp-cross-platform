@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CatListComponent } from './cat-list/cat-list.component';
 
-import { CatFactsApiService } from './cat-facts-api.service';
+import { CatFactsService } from './cat-facts.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { CatFactsApiService } from './cat-facts-api.service';
     AppRoutingModule,
     HttpModule
   ],
-  providers: [CatFactsApiService],
+  providers: [CatFactsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

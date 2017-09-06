@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { CatFactsApiService } from '../cat-facts-api.service';
+import { CatFactsService } from '../cat-facts.service';
 
 @Component({
   selector: 'app-cat-list',
@@ -9,10 +9,10 @@ import { CatFactsApiService } from '../cat-facts-api.service';
 })
 export class CatListComponent implements OnInit {
 
-  constructor(private catFactsApiService: CatFactsApiService) { }
+  constructor(private catFactsService: CatFactsService) { }
 
   ngOnInit() {
-    this.catFactsApiService.getCatFacts(5).subscribe(
+    this.catFactsService.getCatFacts(5).subscribe(
       catFact => console.log(catFact),
       error => {},
       () => {}

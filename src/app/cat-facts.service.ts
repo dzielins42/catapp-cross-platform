@@ -9,7 +9,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
 
 @Injectable()
-export class CatFactsApiService {
+export class CatFactsService {
 
   private _headers: Headers  = new Headers({'X-Requested-With': 'XMLHttpRequest'});
 
