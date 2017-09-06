@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { CatFactsService } from '../cat-facts.service';
-import { CatImagesService } from '../cat-images.service';
+import { CatFactsService } from '../services/cat-facts.service';
+import { CatImagesService } from '../services/cat-images.service';
 
 @Component({
   selector: 'app-cat-list',

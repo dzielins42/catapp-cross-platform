@@ -7,8 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CatListComponent } from './cat-list/cat-list.component';
 
-import { CatFactsService } from './cat-facts.service';
-import { CatImagesService } from './cat-images.service';
+import { CatFactsService } from './services/cat-facts.service';
+import { CatImagesService } from './services/cat-images.service';
 
 @NgModule({
   declarations: [
