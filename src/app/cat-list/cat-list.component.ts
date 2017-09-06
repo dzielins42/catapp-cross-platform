@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { CatFactsService } from '../services/cat-facts.service';
-import { CatImagesService } from '../services/cat-images.service';
+import { CatInfoService, CatInfo } from '../services/cat-info.service';
 
 @Component({
   selector: 'app-cat-list',
@@ -11,18 +10,12 @@ import { CatImagesService } from '../services/cat-images.service';
 export class CatListComponent implements OnInit {
 
   constructor(
-    private catFactsService: CatFactsService,
-    private catImagesService: CatImagesService
+    private catInfoService: CatInfoService
   ) { }
 
   ngOnInit() {
-    this.catFactsService.getCatFacts(5).subscribe(
-      catFact => console.log(catFact),
-      error => {},
-      () => {}
-    );
-    this.catImagesService.getCatImages(5).subscribe(
-      catFact => console.log(catFact),
+    this.catInfoService.getCatInfo(5).subscribe(
+      catInfo => console.log(catInfo),
       error => {},
       () => {}
     );
