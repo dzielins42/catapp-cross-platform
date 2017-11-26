@@ -15,8 +15,9 @@ export class CatImagesService {
   constructor(private http: Http) { }
 
   getCatImages(count : number) : Observable<string> {
+    // randomrising does not work so use new for now
     return this.http.get(
-      'https://www.reddit.com/r/catpictures/randomrising.json?limit=' + count
+      'https://www.reddit.com/r/catpictures/new.json?limit=' + count
     )
     .flatMap(response => Observable.from(response.json().data.children))
     .map(child => child["data"]["preview"]["images"][0]["resolutions"])

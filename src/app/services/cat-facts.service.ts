@@ -16,12 +16,15 @@ export class CatFactsService {
   constructor(private http: Http) { }
 
   getCatFacts(count : number) : Observable<string> {
-    return this.http.get(
+    // Something is wrong with the service
+    /*return this.http.get(
       'https://cors-anywhere.herokuapp.com/https://catfact.ninja/facts?limit=' + count,
       { headers: this._headers }
     )
     .flatMap(response => Observable.from(response.json().data))
-    .map(data => data["fact"])
+    .map(data => data["fact"])*/
+    // Return dummy
+    return Observable.of("dummy").repeat(count)
   }
 
 }
