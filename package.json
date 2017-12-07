@@ -10,7 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "electron-build": "ng build --prod && electron ."
+    "electron-build": "ng build --prod && electron .",
+    "electron-package-linux": "ng build --prod && electron-packager ."
   },
   "private": true,
   "dependencies": {
@@ -36,6 +37,7 @@
     "@types/node": "~8.0.56",
     "codelyzer": "~4.0.1",
     "electron": "^1.7.9",
+    "electron-packager": "^10.1.0",
     "jasmine-core": "~2.8.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~1.7.0",
