@@ -29,5 +29,17 @@ To create application package for Linux run:
 ```
 npm run electron-package-linux
 ```
+## Running as mobile app
 
-
+[Apache Cordova](https://cordova.apache.org/) is used to compile and package mobile application of this project. To build this project, cordova is required. To install it run:
+```
+npm install -g cordova
+```
+To compile Android application run:
+```
+npm run cordova-build-android
+```
+To run it right away on the device, run:
+```
+npm run cordova-run-android
+```
