@@ -11,7 +11,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "electron-build": "ng build --prod && electron .",
-    "electron-package-linux": "ng build --prod && electron-packager ."
+    "electron-package-linux": "ng build --prod && electron-packager .",
+    "cordova-build-android": "ng build --prod --output-path cordova/www/ && cd cordova && cordova build android",
+    "cordova-run-android": "ng build --prod --output-path cordova/www/ && cd cordova && cordova run android --device"
   },
   "private": true,
   "dependencies": {
@@ -36,6 +38,7 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~8.0.56",
     "codelyzer": "~4.0.1",
+    "cordova": "^7.1.0",
     "electron": "^1.7.9",
     "electron-packager": "^10.1.0",
     "jasmine-core": "~2.8.0",
