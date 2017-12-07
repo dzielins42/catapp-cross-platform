@@ -11,7 +11,7 @@ import 'rxjs/add/operator/toArray';
 })
 export class CatListComponent implements OnInit {
 
-  private catInfoArray: CatInfo[];
+  catInfoArray: CatInfo[];
 
   constructor(
     private catInfoService: CatInfoService
